@@ -13,9 +13,9 @@ else
 endif
 
 Sample: Sample.cpp
-	$(CXX) -Wall -g -I../include Sample.cpp -o Sample.app $(LEAP_LIBRARY)
+	$(CXX) -Wall -g -I../include Sample.cpp -o ../build/Sample.app $(LEAP_LIBRARY)
 MyApp: MyApp.cpp
-	$(CXX) -Wall -g -I../include MyApp.cpp -o MyApp.app $(LEAP_LIBRARY)
+	$(CXX) -Wall -g -I../include MyApp.cpp -o ../build/MyApp.app $(LEAP_LIBRARY)
 ifeq ($(OS), Darwin)
 	install_name_tool -change @loader_path/libLeap.dylib ../lib/libLeap.dylib Sample
 endif
