@@ -13,10 +13,13 @@ else
 endif
 
 Sample: Sample.cpp
-	$(CXX) -Wall -g -I../include Sample.cpp -o Sample $(LEAP_LIBRARY)
+	$(CXX) -Wall -g -I../include Sample.cpp -o Sample.app $(LEAP_LIBRARY)
+MyApp: MyApp.cpp
+	$(CXX) -Wall -g -I../include MyApp.cpp -o MyApp.app $(LEAP_LIBRARY)
 ifeq ($(OS), Darwin)
 	install_name_tool -change @loader_path/libLeap.dylib ../lib/libLeap.dylib Sample
 endif
 
 clean:
 	rm -rf Sample Sample.dSYM
+	rm -rf MyApp MyApp.dSYM
