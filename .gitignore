@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+#Ressources generated during executions
+share/positions/output.txt
