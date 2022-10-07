@@ -1,0 +1,34 @@
+Seems like upto Ubutnu 15, it worked fine, but after Ubutnu changed a few things, it doesn't any more and Leap Motion never updated SDK for Linux.
+I found a fix for Ubuntu 20.4, but it took me time to realize that I was running on Ubuntu 22.1, hence that solution didn't work for me.
+I will be trying it on another computer, where hopefully the results will be more compelling.
+[The tutorial I was mentioning: https://blog.keithkim.com/2020/07/note-leap-motion-on-ubuntu-2004.html ]
+
+
+En lançant la commande $dpkg-query -L leap
+on obtient une suite de fichiers installés. Ceux qui sont pertinents (exécutables et config) sont:
+/etc/init/leapd.conf (c'est le seul fichier de configuration)
+/usr/sbin/leapd
+/usr/bin/Playground
+/usr/bin/Recalibrate
+/usr/bin/Visualizer
+/usr/bin/LeapControlPanel
+
+
+Comme visiblement ça ne fonctionne toujours pas [le seul executable qui ne génère pas d'erreur est Visualizer], j'envisage de passer sous un socket Python et dez commander le robot panda via 
+
+
+
+Lénaïc a résolu le pb.
+Il suffit de lancer
+$ sudo service leapd restart
+Le service tourne en arrère plan. Reste ensuite à exploiter les données fournies. Pour cela on peut au choix lancer 
+$ sudo Visualizer
+ou pour une gestion plus fine (ie avec un code qu'on aura écrit)
+$cd <LeapSDK>
+$make [suppose qu'on ait un Makefile, et il faut entrer le nom de l'executable sans extension]
+$ sudo ./<monExecutable>
+
+
+Pour s'assurer que le service tourne : $pidof <leapd>
+Pour le tuer si nécessaire $sudo kill -9 <id de leapd> ou sudo kill -9 $(pidof <leapd>)
+
