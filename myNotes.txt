@@ -3,6 +3,13 @@ I found a fix for Ubuntu 20.4, but it took me time to realize that I was running
 I will be trying it on another computer, where hopefully the results will be more compelling.
 [The tutorial I was mentioning: https://blog.keithkim.com/2020/07/note-leap-motion-on-ubuntu-2004.html ]
 
+[[
+Le site du constructeur our le téléchargement du SDK
+https://developer-archive.leapmotion.com/v2
+
+Ressources pertinentes sur service Ubuntu https://linuxhint.com/systemctl-ubuntu/
+https://doc.ubuntu-fr.org/systemd
+]]
 
 En lançant la commande $dpkg-query -L leap
 on obtient une suite de fichiers installés. Ceux qui sont pertinents (exécutables et config) sont:
