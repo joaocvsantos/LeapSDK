@@ -1,0 +1,4 @@
+/home/joao/tmp/tmp_install/include/Leap.h
+/home/joao/tmp/tmp_install/include/LeapMath.h
+/home/joao/tmp/tmp_install/lib/libLeap.so
+/home/joao/tmp/tmp_install/lib/cmake/LeapSDKConfig.cmake

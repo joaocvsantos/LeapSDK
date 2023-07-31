@@ -5,7 +5,7 @@ I will be trying it on another computer, where hopefully the results will be mor
 
 [[
 Le site du constructeur our le téléchargement du SDK
-https://developer-archive.leapmotion.com/v2
+https://developer-archhttps://developer-archive.leapmotion.com/get-startedive.leapmotion.com/v2
 
 Ressources pertinentes sur service Ubuntu https://linuxhint.com/systemctl-ubuntu/
 https://doc.ubuntu-fr.org/systemd

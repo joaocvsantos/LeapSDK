@@ -17,7 +17,7 @@ public:
 void SampleListener::onConnect(const Controller &controller)
 {
     std::cout << "Connected" << std::endl;
-    this->out.open("../share/positions/output.txt"); // We define the file to write to 
+    this->out.open("output.txt"); // We define the file to write to 
 }
 
 

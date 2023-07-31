@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/MyApp.dir/samples/MyApp.cpp.o -o MyApp  -Wl,-rpath,/home/joao/tmp/LeapSDK/lib/x64 ../lib/x64/libLeap.so 
